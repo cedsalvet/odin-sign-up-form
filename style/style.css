@@ -4,7 +4,7 @@ body {
     font-style: normal;
     font-size : 20px;
     display:flex;
- } 
+} 
 em{
     font-style: italic;
 }
@@ -13,7 +13,21 @@ div#left{
     height:100vh;
     background-image: url("./../assets/backleft.jpg");
     background-size: cover;
- }
+    position: relative;
+}
+div#photoCredit{
+    position: absolute;
+    font-size: 0.8rem;
+    bottom:0;
+    padding: 10px 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    color: white;
+}
+div#photoCredit a, div#photoCredit a:visited, div#photoCredit a:hover{
+    color: white;
+}
 div#logoContainer{
     margin-top: 30%;
     background-color: rgba(0,0,0,0.5);
@@ -30,29 +44,20 @@ div#logoContainer img{
 }
 
 
-
-
-
-
-
-
-
-
-
- div#right{
+div#right{
     width:65%;
     background-color: #F9FAFB;
- }
- div#right div#signUpForm{
+}
+div#right div#signUpForm{
     width:100%;
     background-color: #FFF;
- }
- div#mainText {
+}
+div#mainText {
     padding: 50px;
     padding-top: 10%;
- }
- div#mainText p{
+}
+div#mainText p{
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
- }
+}
