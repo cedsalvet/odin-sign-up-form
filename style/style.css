@@ -4,13 +4,15 @@ body {
     font-style: normal;
     font-size : 20px;
     display:flex;
+    width:100vw;
+    height:100vh;
 } 
 em{
     font-style: italic;
 }
 div#left{
     width:35%;
-    height:100vh;
+    height:100%;
     background-image: url("./../assets/backleft.jpg");
     background-size: cover;
     position: relative;
@@ -25,8 +27,8 @@ div#photoCredit{
     text-align: center;
     color: white;
 }
-div#photoCredit a, div#photoCredit a:visited, div#photoCredit a:hover{
-    color: white;
+a, div#photoCredit a:visited, div#photoCredit a:hover{
+    color: #937968;
 }
 div#logoContainer{
     margin-top: 30%;
@@ -42,15 +44,9 @@ div#logoContainer{
 div#logoContainer img{
     height: 120px;
 }
-
-
 div#right{
     width:65%;
     background-color: #F9FAFB;
-}
-div#right div#signUpForm{
-    width:100%;
-    background-color: #FFF;
 }
 div#mainText {
     padding: 50px;
@@ -60,4 +56,57 @@ div#mainText p{
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+}
+div#signUpForm fieldset{
+    background-color: #FFF;
+    margin: auto;
+    padding-left:50px;
+    padding-right:50px;
+    padding-bottom:50px;
+    box-shadow: 0 10px 5px #937968;
+}
+div#signUpForm p{
+    font-size: 1em;
+}
+div#formContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+div#formContainer div {
+    padding: 10px;
+    padding-left: 0;
+}
+div#formContainer div label{
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+div#formContainer div input{
+    width : 70%;
+    border: 1px solid grey;
+    border-radius: 3px;
+    height:1.7rem;
+}
+
+
+div#formContainer div input:invalid {
+    border-color: red;
+}
+
+div#formContainer div input:valid {
+    border-color: #937968;
+}
+
+.errorMessage{
+    visibility: hidden;
+}
+
+
+div#signUpForm button{
+    margin-top: 50px;
+    margin-left:50px;
+}
+div#signUpForm p#login{
+    margin-top: 20px;
+    margin-left:50px;
 }

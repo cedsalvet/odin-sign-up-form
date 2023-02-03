@@ -24,21 +24,60 @@
             <p>You <em>know</em> you want to.</p>
         </div>
         <div id ="signUpForm">
-            <p>Let's do this !</p>
             <form action="#" method="post">
-                <label for="firstName">First Name</label><input type="text" id="firstName" name="firstName">
-                <label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName">
-                <label for="email">Email</label><input type="text" id="email" name="email">
-                <label for="phoneNumber">Phone Number</label><input type="text" id="phoneNumber" name="phoneNumber">
-
-                <label for="password">Password</label><input type="text" id="password" name="password">
-                <label for="passwordConfirm">Confirm Password</label><input type="text" id="passwordConfirm" name="passwordConfirm">
-
+                <fieldset>
+                <legend>Let's do this !</legend>
+                    <div id="formContainer">
+                        <div id="firstContainer">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" title="Your First Name is required" required>
+                        </div>
+                        <div id="lastContainer">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName">
+                        </div>
+                        <div id="emailContainer">
+                            <label for="email">Email</label>
+                            <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="text" id="email" name="email" title="Please enter a valid mail, example: odin@valhalla.god" required>
+                        </div>
+                        <div id="phoneContainer">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="text" id="phoneNumber" name="phoneNumber">
+                        </div>
+                        <div id="passContainer">
+                            <label for="password">Password</label>
+                            <input class="invalidPassword" minlength="8" type="text" id="password" name="password" title="Your must have at leat 8 characters and match the confirmation" required>
+                        </div>
+                        <div id="passcContainer">
+                            <label for="passwordConfirm">Confirm Password</label>
+                            <input type="text" minlength="8" id="passwordConfirm" name="passwordConfirm" title="Your must have at leat 8 characters and match the confirmation" required>
+                        </div>
+                    </div>
+                </fieldset>
                 <button type="submit">Create Account</button>
+                <p id="login">Already have an account ? <a href="#">Log in</a></p>
             </form>
-            <p>Already have an account ?<a href="#">Log in</a></p>
         </div>
-        <p>lkfdghkjfdksjgkl</p>
     </div>
+    <script>
+        let password = document.querySelector("#password")
+        let passwordConfirm = document.querySelector("#passwordConfirm")
+        password.addEventListener("input", checkPassword);
+        passwordConfirm.addEventListener("input", checkPassword);
+        
+        function checkPassword(){
+            let password = document.querySelector("#password")
+            let passwordConfirm = document.querySelector("#passwordConfirm")
+            
+            if (password.value != passwordConfirm.value) {
+                password.setCustomValidity("Invalid field."); 
+                passwordConfirm.setCustomValidity("Invalid field."); 
+            } else if (password.value.length >= 8 ){
+                password.setCustomValidity(""); 
+                passwordConfirm.setCustomValidity(""); 
+            }
+        }
+    </script>
+
 </body>
 </html>
