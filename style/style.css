@@ -87,24 +87,36 @@ div#formContainer div input{
     border-radius: 3px;
     height:1.7rem;
 }
-
-
 div#formContainer div input:invalid {
     border-color: red;
 }
-
 div#formContainer div input:valid {
     border-color: #937968;
 }
-
 .errorMessage{
     visibility: hidden;
 }
-
-
 div#signUpForm button{
     margin-top: 50px;
     margin-left:50px;
+    margin-bottom:20px;
+    background-color: #937968;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 10px 10px 20px #444;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+div#signUpForm button:hover{
+    margin-top: 50px;
+    margin-left:50px;
+    background-color: #937968CC;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 10px 10px 20px #444;
 }
 div#signUpForm p#login{
     margin-top: 20px;
