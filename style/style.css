@@ -1,0 +1,22 @@
+body {
+    font-family: 'LucymarSansRegular';
+    font-weight: normal;
+    font-style: normal;
+    font-size : 20px;
+    display:flex;
+ } 
+
+ div#left{
+    width:35%;
+    height:100vh;
+    background-image: url("./../assets/backleft.jpg");
+    background-size: cover;
+ }
+ div#right{
+    width:65%;
+    background-color: #F9FAFB;
+ }
+ div#right div#signUpForm{
+    width:100%;
+    background-color: #FFF;
+ }
